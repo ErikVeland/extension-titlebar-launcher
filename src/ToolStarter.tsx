@@ -93,7 +93,7 @@ function makeExeId(exePath: string): string {
 function ToolStarter(props: IToolStarterProps) {
   const { onGetStarters, onGetValidStarters } = props;
   const { addToTitleBar, discovery, game, discoveredTools, mods,
-          toolsRunning, toolsOrder, primaryTool } = useSelector(mapStateToProps);
+    toolsRunning, toolsOrder, primaryTool } = useSelector(mapStateToProps);
 
   const [toolImages, setToolImages] = React.useState({});
   const [validStarters, setValidStarters] = React.useState([]);
@@ -162,9 +162,9 @@ function mapStateToProps(state: types.IState): IConnectedProps {
   }
   return {
     addToTitleBar: util.getSafe(state,
-      ['settings', 'interface', 'tools', 'addToolsToTitleBar'], false),
+                                ['settings', 'interface', 'tools', 'addToolsToTitleBar'], false),
     toolsOrder: util.getSafe(state,
-      ['settings', 'interface', 'tools', 'order', game.id], []),
+                             ['settings', 'interface', 'tools', 'order', game.id], []),
     game,
     discovery,
     discoveredTools: game !== undefined
@@ -175,8 +175,8 @@ function mapStateToProps(state: types.IState): IConnectedProps {
       : undefined,
     toolsRunning: state.session.base.toolsRunning,
     mods: game !== undefined
-    ? util.getSafe(state, ['persistent', 'mods', game.id], emptyObj)
-    : emptyObj,
+      ? util.getSafe(state, ['persistent', 'mods', game.id], emptyObj)
+      : emptyObj,
   };
 }
 

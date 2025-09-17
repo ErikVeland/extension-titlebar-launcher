@@ -76,9 +76,9 @@ function mapStateToProps(state: types.IState): IConnectedProps {
 
   return {
     toolsOrder: util.getSafe(state,
-      ['settings', 'interface', 'tools', 'order', game.id], []),
+                             ['settings', 'interface', 'tools', 'order', game.id], []),
     addToTitleBar: util.getSafe(state,
-      ['settings', 'interface', 'tools', 'addToolsToTitleBar'], false),
+                                ['settings', 'interface', 'tools', 'addToolsToTitleBar'], false),
     game,
     primaryTool: util.getSafe(state, ['settings', 'interface', 'primaryTool', game.id], undefined),
     discovery,

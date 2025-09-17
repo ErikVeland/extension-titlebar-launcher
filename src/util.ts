@@ -1,9 +1,9 @@
 import { types, util } from 'vortex-api';
 
 export function toStarterInfo(game: types.IGameStored,
-                       gameDiscovery: types.IDiscoveryResult,
-                       tool: types.IToolStored,
-                       toolDiscovery: types.IDiscoveredTool): types.IStarterInfo {
+                              gameDiscovery: types.IDiscoveryResult,
+                              tool: types.IToolStored,
+                              toolDiscovery: types.IDiscoveredTool): types.IStarterInfo {
   return new util.StarterInfo(game, gameDiscovery, tool, toolDiscovery);
 }
 
@@ -25,5 +25,5 @@ export function starterMemoizer(game: types.IGameStored,
       }
     })
     .filter(iter => iter !== undefined);
-    return result as types.IStarterInfo[];
+  return result as types.IStarterInfo[];
 }

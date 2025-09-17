@@ -42,11 +42,11 @@ function init(context: types.IExtensionContext) {
     },
     props: {
       onGetStarters: (game: types.IGameStored,
-        discovery: types.IDiscoveryResult,
-        tools: types.IDiscoveredTool[]) => toStarters(game, discovery, tools),
+                      discovery: types.IDiscoveryResult,
+                      tools: types.IDiscoveredTool[]) => toStarters(game, discovery, tools),
       onGetValidStarters: (game: types.IGameStored,
-        discovery: types.IDiscoveryResult,
-        tools: types.IDiscoveredTool[]) => getValidStarters(game, discovery, tools)
+                           discovery: types.IDiscoveryResult,
+                           tools: types.IDiscoveredTool[]) => getValidStarters(game, discovery, tools)
     }
   });
 
